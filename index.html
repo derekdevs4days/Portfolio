@@ -4,33 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-    <title>Portfolio</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.9.3/tsparticles.bundle.min.js"
       integrity="sha512-4zLdYOE9r8x0esJk0GyNtEZy/N/CIeEF/vW90cg31PdMIpIEMV5qwnV7Jd4isRfBD1ivzpcV7dDELN+A/j6MiA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <title>Portfolio</title>
+
   </head>
-  <body>
+  <body class="body-container">
+
     <header>
       <nav>
-        <ul>
-          <li class="logo">Derek</li>
+        <ul class='header-list'>
+          <li class="logo"><span>d.</span></li>
           <li class="about"><a href="#about">About</a></li>
           <li class="skills"><a href="#skills">Skills</a></li>
           <li class="projects"><a href="#projects">Projects</a></li>
           <li class="contacts"><a href="#contacts">Contact</a></li>
-          <li><button>Day</button></li>
+          <li><button class='light-dark-btn'><img class='light-dark' src="assets/moon.png" alt="moon-icon"></button></li>
         </ul>
       </nav>
     </header>
 
-    <section>
+    <section class="hero-section">
       <div>
-        <h1>Hi There! <span class="wave">👋🏼</span> <br>I'm Derek</h1>
+        <h1>Hi There! <span class="wave">👋🏼</span> <br>I'm Derek.</h1>
         <h2>Software Engineer</h2>
       </div>
 
