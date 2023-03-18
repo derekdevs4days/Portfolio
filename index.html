@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <script
@@ -16,132 +19,188 @@
       referrerpolicy="no-referrer"
     ></script>
     <title>Portfolio</title>
-
   </head>
   <body class="body-container">
-
     <header>
       <nav>
-        <ul class='header-list'>
+        <ul class="header-list">
           <li class="logo"><span>d.</span></li>
           <li class="about"><a href="#about">About</a></li>
           <li class="skills"><a href="#skills">Skills</a></li>
           <li class="projects"><a href="#projects">Projects</a></li>
           <li class="contacts"><a href="#contacts">Contact</a></li>
-          <li><button class='light-dark-btn'><img class='light-dark' src="assets/moon.png" alt="moon-icon"></button></li>
+          <li>
+            <button class="light-dark-btn">
+              <img class="light-dark" src="assets/moon.png" alt="moon-icon" />
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
 
     <section class="hero-section">
       <div>
-        <h1>Hi There! <span class="wave">👋🏼</span> <br>I'm Derek.</h1>
+        <h1>Hi There! <span class="wave">👋🏼</span> <br />I'm Derek.</h1>
         <h2>Software Engineer</h2>
       </div>
 
-      <img src="" alt="main-image" width="300" height="300"></img>
+      <img
+        class="hero-img"
+        src="assets/floating.png"
+        alt="main-image"
+        width="450"
+        height="500"
+      />
     </section>
 
-    <section>
-      <img src="" alt="pic of me">
-      <span>About Me</span>
-      <h2>Derek Truong</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, maxime id ullam praesentium corrupti iusto vel ipsa repellat fugit nostrum corporis, dignissimos doloremque excepturi optio? Voluptatem eligendi qui veniam incidunt?</p>
+    <span class="section-starter">About</span>
+
+    <section class="about-section">
+      <img
+        class="about-img"
+        src="assets/mac.png"
+        alt="3D iMac"
+        width="370"
+        height="350"
+      />
+
+      <div class="about-left">
+        <h2>Derek Truong</h2>
+        <p class="about-p">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime id
+          ullam praesentium corrupti iusto vel ipsa repellat fugit nostrum
+          corporis, dignissimos doloremque excepturi optio? Voluptatem eligendi
+          qui veniam incidunt?
+        </p>
+      </div>
     </section>
 
-    <section>
-      <span>My Skills</span>
+    <span class="section-starter">Skills</span>
 
-      <div>
+    <section class="skills-section">
+      <div class="skills-row">
         <div class="skill">
-          <img src="" alt="">
+          <img src="assets/js.png" alt="javascript logo" />
           <span>Javascript</span>
         </div>
         <div class="skill">
-          <img src="" alt="">
+          <img src="assets/typescriptlang-icon.svg" alt="typescript logo" />
           <span>TypeScript</span>
         </div>
         <div class="skill">
-          <img src="" alt="">
+          <img src="assets/reactjs-icon.svg" alt="react logo" />
           <span>React.JS</span>
         </div>
-        <div class="description"></div>
+        <div class="description">
+          <p>
+            Writing easily understood, modular, fast, and type-safe code with
+            TypeScript and modern JavaScript syntax and publishing packages to
+            NPM.
+          </p>
+        </div>
       </div>
-      
-      <div>
+
+      <div class="skills-row">
         <div class="skill">
-          <img src="" alt="">
+          <img src="assets/w3_html5-icon.svg" alt="html logo" />
           <span>HTML</span>
         </div>
         <div class="skill">
-          <img src="" alt="">
+          <img src="assets/w3_css-icon.svg" alt="css logo" />
           <span>CSS</span>
         </div>
         <div class="skill">
-          <img src="" alt="">
+          <img src="assets/tailwindcss-icon.svg" alt="tailwind logo" />
           <span>Tailwind</span>
         </div>
-        <div class="description"></div>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+            accusamus vel, magnam nostrum laboriosam consectetur sed, sapiente,
+            voluptatum inventore exercitationem animi.
+          </p>
+        </div>
       </div>
 
-      <div>
+      <div class="skills-row">
         <div class="skill">
-          <img src="" alt="">
+          <img src="assets/nodejs-icon.svg" alt="node logo" />
           <span>Node.JS</span>
         </div>
         <div class="skill">
-          <img src="" alt="">
+          <img src="assets/firebase-icon.svg" alt="Firebase logo" />
           <span>Firebase</span>
         </div>
         <div class="skill">
-          <img src="" alt="">
+          <img src="assets/supabase-icon.svg" alt="supabase logo" />
           <span>Supabase</span>
         </div>
-        <div class="description"></div>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+            accusamus vel, magnam nostrum laboriosam consectetur sed, sapiente,
+            voluptatum inventore exercitationem animi.
+          </p>
+        </div>
       </div>
 
-      <div>
+      <div class="skills-row">
         <div class="skill">
-          <img src="" alt="">
+          <img src="assets/github.png" alt="github logo" />
           <span>Git/Github</span>
         </div>
         <div class="skill">
-          <img src="" alt="">
+          <img src="assets/netlify-icon.svg" alt="netlify logo" />
           <span>Netlify</span>
         </div>
         <div class="skill">
-          <img src="" alt="">
+          <img src="" alt="vervel logo" />
           <span>Vercel</span>
         </div>
-        <div class="description"></div>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+            accusamus vel, magnam nostrum laboriosam consectetur sed, sapiente,
+            voluptatum inventore exercitationem animi.
+          </p>
+        </div>
       </div>
 
-      <div>
+      <div class="skills-row">
         <div class="skill">
-          <img src="" alt="">
+          <img src="assets/adobe.png" alt="adobe logo" />
+          <span id="adobe-creative">Adobe</span>
+        </div>
+        <div class="skill">
+          <img src="assets/figma-icon.svg" alt="figma logo" />
           <span>Figma</span>
         </div>
         <div class="skill">
-          <img src="" alt="">
-          <span>Adobe Ligthroom</span>
+          <img src="" alt="" />
+          <span class="adobe-creative">Adobe</span>
         </div>
-        <div class="skill">
-          <img src="" alt="">
-          <span>Adobe Photoshop</span>
+        <div class="description">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+            accusamus vel, magnam nostrum laboriosam consectetur sed, sapiente,
+            voluptatum inventore exercitationem animi.
+          </p>
         </div>
-        <div class="description"></div>
       </div>
-
     </section>
 
     <section>
       <span>Feature</span>
 
       <div class="featured-projects">
-        <img src="" alt="project">
+        <img src="" alt="project" />
         <div>
           <h3>Praise</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio ipsam quo pariatur id itaque, amet veniam odit aliquid necessitatibus sint laboriosam expedita.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio
+            ipsam quo pariatur id itaque, amet veniam odit aliquid
+            necessitatibus sint laboriosam expedita.
+          </p>
           <ul>
             <li class="technology">React</li>
             <li class="technology">HTML & CSS</li>
@@ -151,10 +210,14 @@
       </div>
 
       <div class="featured-projects">
-        <img src="" alt="project">
+        <img src="" alt="project" />
         <div>
           <h3>Praise</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio ipsam quo pariatur id itaque, amet veniam odit aliquid necessitatibus sint laboriosam expedita.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio
+            ipsam quo pariatur id itaque, amet veniam odit aliquid
+            necessitatibus sint laboriosam expedita.
+          </p>
           <ul>
             <li class="technology">React</li>
             <li class="technology">HTML & CSS</li>
@@ -164,10 +227,14 @@
       </div>
 
       <div class="featured-projects">
-        <img src="" alt="project">
+        <img src="" alt="project" />
         <div>
           <h3>Praise</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio ipsam quo pariatur id itaque, amet veniam odit aliquid necessitatibus sint laboriosam expedita.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio
+            ipsam quo pariatur id itaque, amet veniam odit aliquid
+            necessitatibus sint laboriosam expedita.
+          </p>
           <ul>
             <li class="technology">React</li>
             <li class="technology">HTML & CSS</li>
@@ -177,10 +244,14 @@
       </div>
 
       <div class="featured-projects">
-        <img src="" alt="project">
+        <img src="" alt="project" />
         <div>
           <h3>Praise</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio ipsam quo pariatur id itaque, amet veniam odit aliquid necessitatibus sint laboriosam expedita.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio
+            ipsam quo pariatur id itaque, amet veniam odit aliquid
+            necessitatibus sint laboriosam expedita.
+          </p>
           <ul>
             <li class="technology">React</li>
             <li class="technology">HTML & CSS</li>
@@ -188,9 +259,7 @@
           </ul>
         </div>
       </div>
-
     </section>
-
 
     <div id="tsparticles"></div>
     <script>
