@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <script
@@ -60,7 +61,7 @@
         class="about-img"
         src="assets/mac.png"
         alt="3D iMac"
-        width="370"
+        width="390"
         height="350"
       />
 
@@ -93,9 +94,8 @@
         </div>
         <div class="description">
           <p>
-            Writing easily understood, modular, fast, and type-safe code with
-            TypeScript and modern JavaScript syntax and publishing packages to
-            NPM.
+            Writing clean, modular, and fast code using modern JavaScript syntax
+            and TypeScript, ensuring type-safety and improved maintainability.
           </p>
         </div>
       </div>
@@ -115,9 +115,8 @@
         </div>
         <div class="description">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-            accusamus vel, magnam nostrum laboriosam consectetur sed, sapiente,
-            voluptatum inventore exercitationem animi.
+            Creating effective layouts and utilizing reusable components to
+            build intuitive UI using HTML, CSS, and the Tailwind CSS framework.
           </p>
         </div>
       </div>
@@ -132,30 +131,8 @@
           <span>Firebase</span>
         </div>
         <div class="skill">
-          <img src="assets/supabase-icon.svg" alt="supabase logo" />
-          <span>Supabase</span>
-        </div>
-        <div class="description">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-            accusamus vel, magnam nostrum laboriosam consectetur sed, sapiente,
-            voluptatum inventore exercitationem animi.
-          </p>
-        </div>
-      </div>
-
-      <div class="skills-row">
-        <div class="skill">
           <img src="assets/github.png" alt="github logo" />
           <span>Git/Github</span>
-        </div>
-        <div class="skill">
-          <img src="assets/netlify-icon.svg" alt="netlify logo" />
-          <span>Netlify</span>
-        </div>
-        <div class="skill">
-          <img src="" alt="vervel logo" />
-          <span>Vercel</span>
         </div>
         <div class="description">
           <p>
@@ -176,87 +153,99 @@
           <span>Figma</span>
         </div>
         <div class="skill">
-          <img src="" alt="" />
-          <span class="adobe-creative">Adobe</span>
+          <img src="assets/netlify-icon.svg" alt="netlify logo" />
+          <span class="adobe-creative">Netlify</span>
         </div>
         <div class="description">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-            accusamus vel, magnam nostrum laboriosam consectetur sed, sapiente,
-            voluptatum inventore exercitationem animi.
+            Creating visually stunning designs and UI that highlight a brand's
+            essence using Figma and Adobe Creative Suite.
           </p>
         </div>
       </div>
     </section>
 
+    <span class="section-starter featured">Featured</span>
+
     <section>
-      <span>Feature</span>
+      <div class="featured-projects-container">
+        <div class="featured-projects">
+          <img class="project-img" src="assets/mac.png" alt="project" />
+          <div class="project-info">
+            <h3>Praise</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio
+              ipsam quo pariatur id itaque, amet veniam odit aliquid
+              necessitatibus sint laboriosam expedita.
+            </p>
+            <ul class="project-tech">
+              <li class="technology">React</li>
+              <li class="technology">HTML & CSS</li>
+              <li class="technology">Supabase</li>
+            </ul>
 
-      <div class="featured-projects">
-        <img src="" alt="project" />
-        <div>
-          <h3>Praise</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio
-            ipsam quo pariatur id itaque, amet veniam odit aliquid
-            necessitatibus sint laboriosam expedita.
-          </p>
-          <ul>
-            <li class="technology">React</li>
-            <li class="technology">HTML & CSS</li>
-            <li class="technology">Supabase</li>
-          </ul>
+            <ul class="project-sites">
+              <li class="class"><button>View Site</button></li>
+              <li class="class"><button>View Source</button></li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="featured-projects">
-        <img src="" alt="project" />
-        <div>
-          <h3>Praise</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio
-            ipsam quo pariatur id itaque, amet veniam odit aliquid
-            necessitatibus sint laboriosam expedita.
-          </p>
-          <ul>
-            <li class="technology">React</li>
-            <li class="technology">HTML & CSS</li>
-            <li class="technology">Supabase</li>
-          </ul>
+      <div class="featured-projects-container">
+        <div class="featured-projects">
+          <img src="" alt="project" />
+          <div>
+            <h3>Project 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio
+              ipsam quo pariatur id itaque, amet veniam odit aliquid
+              necessitatibus sint laboriosam expedita.
+            </p>
+            <ul>
+              <li class="technology">React</li>
+              <li class="technology">HTML & CSS</li>
+              <li class="technology">Supabase</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="featured-projects">
-        <img src="" alt="project" />
-        <div>
-          <h3>Praise</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio
-            ipsam quo pariatur id itaque, amet veniam odit aliquid
-            necessitatibus sint laboriosam expedita.
-          </p>
-          <ul>
-            <li class="technology">React</li>
-            <li class="technology">HTML & CSS</li>
-            <li class="technology">Supabase</li>
-          </ul>
+      <div class="featured-projects-container">
+        <div class="featured-projects">
+          <img src="" alt="project" />
+          <div>
+            <h3>Project 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio
+              ipsam quo pariatur id itaque, amet veniam odit aliquid
+              necessitatibus sint laboriosam expedita.
+            </p>
+            <ul>
+              <li class="technology">React</li>
+              <li class="technology">HTML & CSS</li>
+              <li class="technology">Supabase</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="featured-projects">
-        <img src="" alt="project" />
-        <div>
-          <h3>Praise</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio
-            ipsam quo pariatur id itaque, amet veniam odit aliquid
-            necessitatibus sint laboriosam expedita.
-          </p>
-          <ul>
-            <li class="technology">React</li>
-            <li class="technology">HTML & CSS</li>
-            <li class="technology">Supabase</li>
-          </ul>
+      <div class="featured-projects-container">
+        <div class="featured-projects">
+          <img src="" alt="project" />
+          <div>
+            <h3>Project 4</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odio
+              ipsam quo pariatur id itaque, amet veniam odit aliquid
+              necessitatibus sint laboriosam expedita.
+            </p>
+            <ul>
+              <li class="technology">React</li>
+              <li class="technology">HTML & CSS</li>
+              <li class="technology">Supabase</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -271,6 +260,21 @@
         .catch((error) => {
           console.error(error);
         });
+    </script>
+
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".hero-img"), {
+        max: 10,
+        speed: 500,
+      });
+      VanillaTilt.init(document.querySelectorAll(".about-img"), {
+        max: 15,
+        speed: 500,
+      });
+      VanillaTilt.init(document.querySelectorAll(".skill"), {
+        max: 25,
+        speed: 500,
+      });
     </script>
   </body>
 </html>

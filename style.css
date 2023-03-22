@@ -6,6 +6,7 @@
 :root {
   --font: #27272a;
   --background-color: #fafafa;
+  --logo-color: #fa0f00;
 }
 
 .body-container {
@@ -32,7 +33,7 @@
 .logo {
   margin-right: auto;
   font-weight: 600;
-  color: #fa0f00;
+  color: var(--logo-color);
   font-size: 2.4rem;
 }
 
@@ -89,7 +90,7 @@ section {
 }
 
 .hero-img {
-  border-radius: 100px;
+  border: 1px dashed black;
 }
 
 /* ABOUT SECTION */
@@ -144,12 +145,18 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  flex-shrink: 0;
   padding: 18px;
   width: 60px;
   height: 60px;
   border-radius: 20px;
   background-color: #fefefe;
   box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.07);
+  border: 1px dashed black;
+}
+
+.skill:hover {
+  background-color: #cacacad5;
 }
 
 .skill img {
@@ -162,14 +169,63 @@ section {
 }
 
 .description {
+  display: flex;
+  align-items: center;
   font-size: 0.9rem;
-  margin-left: 5%;
+  margin-left: auto;
   max-width: 60%;
+  min-height: 50px;
   padding: 23px 15px;
-  text-align: start;
   border-radius: 20px;
   background-color: #fefefe;
   box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.047);
+}
 
-  border: 1px dashed black;
+/* FEATURED PROJECTS*/
+.featured {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 50px;
+  z-index: 2;
+}
+
+.featured-projects-container {
+  min-height: 100vh;
+}
+
+.featured-projects {
+  min-height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fefefe;
+
+  border-radius: 20px;
+  box-shadow: 0 20px 12px 1px rgba(0, 0, 0, 0.06);
+
+  opacity: 0;
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  translate: -50% -90%;
+
+  z-index: 0;
+}
+
+.project-img {
+  width: 65%;
+}
+.project-info {
+  width: 30%;
+}
+
+.project-tech {
+  list-style-type: symbols(-);
+}
+
+.project-sites {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
 }
