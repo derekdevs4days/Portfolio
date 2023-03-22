@@ -13,8 +13,14 @@ document.addEventListener("scroll", () => {
   if (!isBetween(35, 100, scrollPercentage)) {
     cards.forEach((card, i) => {
       card.style.opacity = "0";
+      card.style.zIndex = "-1";
+    });
+  } else {
+    cards.forEach((card, i) => {
+      card.style.zIndex = "0";
     });
   }
+  let active = 0;
 
   if (isBetween(38, 42, scrollPercentage)) {
     const fadeInOpacity = mapValue(scrollPercentage, 38, 42, 0, 100);
@@ -22,6 +28,7 @@ document.addEventListener("scroll", () => {
     cards[0].style.opacity = `${(fadeInOpacity / 100) * 2}`;
     cards[0].style.top = `${movementIn}%`;
     cards[0].style.translate = `-50% -${movementIn}%`;
+    active = 0;
   }
   if (isBetween(45, 49, scrollPercentage)) {
     const fadeOutOpacity = mapValue(scrollPercentage, 45, 49, 100, 0);
@@ -37,6 +44,7 @@ document.addEventListener("scroll", () => {
     cards[1].style.opacity = `${(fadeInOpacity / 100) * 2}`;
     cards[1].style.top = `${movementIn}%`;
     cards[1].style.translate = `-50% -${movementIn}%`;
+    active = 1;
   }
   if (isBetween(59, 63, scrollPercentage)) {
     const fadeOutOpacity = mapValue(scrollPercentage, 59, 63, 100, 0);
@@ -52,6 +60,7 @@ document.addEventListener("scroll", () => {
     cards[2].style.opacity = `${(fadeInOpacity / 100) * 2}`;
     cards[2].style.top = `${movementIn}%`;
     cards[2].style.translate = `-50% -${movementIn}%`;
+    active = 2;
   }
   if (isBetween(73, 77, scrollPercentage)) {
     const fadeOutOpacity = mapValue(scrollPercentage, 73, 77, 100, 0);
@@ -67,14 +76,20 @@ document.addEventListener("scroll", () => {
     cards[3].style.opacity = `${(fadeInOpacity / 100) * 2}`;
     cards[3].style.top = `${movementIn}%`;
     cards[3].style.translate = `-50% -${movementIn}%`;
+    active = 3;
   }
   if (isBetween(87, 91, scrollPercentage)) {
     const fadeOutOpacity = mapValue(scrollPercentage, 87, 91, 100, 0);
     const movementOut = mapValue(scrollPercentage, 87, 91, 50, 40);
-    cards[2].style.opacity = `${(fadeOutOpacity / 100) * 2}`;
-    cards[2].style.top = `${movementOut}%`;
-    cards[2].style.translate = `-50% -${movementOut}%`;
+    cards[3].style.opacity = `${(fadeOutOpacity / 100) * 2}`;
+    cards[3].style.top = `${movementOut}%`;
+    cards[3].style.translate = `-50% -${movementOut}%`;
   }
+  cards.forEach((card, i) => {
+    if (i !== active) {
+      card.style.opacity = "0";
+    }
+  });
 });
 function mapValue(value, start1, end1, start2, end2) {
   return Math.round(
@@ -83,3 +98,33 @@ function mapValue(value, start1, end1, start2, end2) {
 }
 
 const isBetween = (start, end, value) => value >= start && value <= end;
+
+// THEMES
+const themeButton = document.querySelector("#theme");
+
+let currentTheme = localStorage.getItem("theme");
+
+if (currentTheme == "dark") {
+  document.body.classList.add("dark-theme");
+  themeButton.innerText = "🌞";
+} else {
+  themeButton.innerText = "🌚";
+  currentTheme = "light";
+}
+
+function themeMode() {
+  document.body.classList.toggle("dark-theme");
+
+  if (currentTheme == "dark") {
+    currentTheme = "light";
+    themeButton.innerText = "🌚";
+  } else {
+    currentTheme = "dark";
+    themeButton.innerText = "🌞";
+  }
+
+  localStorage.setItem("theme", currentTheme);
+}
+
+themeButton.addEventListener("click", themeMode);
+document.documentElement.style.setProperty("--background-color", "#000");

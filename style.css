@@ -5,7 +5,12 @@
 
 :root {
   --font: #27272a;
-  --background-color: #fafafa;
+  --background-color: yellow;
+  --logo-color: #fa0f00;
+}
+.dark-theme {
+  --font: #27272a;
+  --background-color: green;
   --logo-color: #fa0f00;
 }
 
