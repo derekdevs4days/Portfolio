@@ -296,8 +296,8 @@
         "width": 1920,
         "height": 1080
       },
-      "limit": 60,
-      "value": 30
+      "limit": 30,
+      "value": 10
     },
     "opacity": {
       "random": {

@@ -21,7 +21,7 @@
     ></script>
     <title>Portfolio</title>
   </head>
-  <body class="body-container dark-theme">
+  <body class="body-container">
     <header>
       <nav>
         <ul class="header-list">
@@ -250,6 +250,47 @@
       </div>
     </section>
 
+    <section class="form">
+      <form       id="fs-frm"
+        name="simple-contact-form"
+        accept-charset="utf-8"
+        action="https://formspree.io/f/mjvdeabb"       method="post"      >
+              <fieldset id="fs-frm-inputs">
+              <label   for="full-name">Full Name<input
+            type="text"
+            name="name"
+            id="full-name"
+            placeholder="First and Last"
+            required=""
+          /></label>
+                
+          <label for="email-address" />Email    Address   <input
+            type="email"
+            name="_replyto"
+            id="email-address"
+                  placeholder="email@domain.tld"
+            required=""
+          /></label>
+                
+          <label for="message">Message<textarea
+            rows="5"
+            name="message"
+            id="message"
+                  placeholder="Aenean lacinia       bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."
+            required=""
+          ></textarea></label>
+                
+                <input
+            type="hidden"
+            name="_subject"
+            id="email-subject"
+            value="Contact Form Submission"
+          />
+        </fieldset>
+        <input type="submit" value="Submit" />
+            </form>
+    </section>
+
     <div id="tsparticles"></div>
     <script>
       tsParticles
@@ -265,15 +306,15 @@
     <script type="text/javascript">
       VanillaTilt.init(document.querySelectorAll(".hero-img"), {
         max: 10,
-        speed: 500,
+        speed: 800,
       });
       VanillaTilt.init(document.querySelectorAll(".about-img"), {
         max: 15,
-        speed: 500,
+        speed: 800,
       });
       VanillaTilt.init(document.querySelectorAll(".skill"), {
-        max: 25,
-        speed: 500,
+        max: 15,
+        speed: 800,
       });
     </script>
   </body>
