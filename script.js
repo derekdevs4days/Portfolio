@@ -2,6 +2,7 @@ const cards = document.querySelectorAll(".featured-projects");
 const darkModeBTN = document.querySelector(".light-dark-btn");
 const sunMoonIMG = document.querySelector(".light-dark");
 const body = document.querySelector("body");
+
 //THEME
 darkModeBTN.addEventListener("click", changeTheme);
 
@@ -30,7 +31,7 @@ document.addEventListener("scroll", () => {
   const scrollPercentage = Math.round((currentScroll / maxBodyHeight) * 100);
   console.log(`scrolled: ${scrollPercentage}%`);
 
-  if (!isBetween(35, 100, scrollPercentage)) {
+  if (!isBetween(35, 90, scrollPercentage)) {
     cards.forEach((card, i) => {
       card.style.opacity = "0";
       card.style.zIndex = "-1";
@@ -131,3 +132,47 @@ function mapValue(value, start1, end1, start2, end2) {
 }
 
 const isBetween = (start, end, value) => value >= start && value <= end;
+
+//Typing Text
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["Hi, I'm Derek! 👋"];
+const typingDelay = 100;
+const erasingDelay = 100;
+const newTextDelay = 2000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    // if (!cursorSpan.classList.contains("typing"))
+    //   cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } else {
+    // cursorSpan.classList.remove("typing");
+    // setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    if (!cursorSpan.classList.contains("typing"))
+      cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(
+      0,
+      charIndex - 1
+    );
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+setTimeout(type, newTextDelay + 250);

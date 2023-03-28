@@ -116,6 +116,10 @@ section {
   line-height: 1.6;
 }
 
+.heading {
+  flex: 1;
+}
+
 .hero-img {
 }
 
@@ -129,6 +133,7 @@ section {
   background-color: var(--about-bg);
   box-shadow: 0 20px 12px 1px rgba(0, 0, 0, 0.06);
   margin-bottom: 175px;
+  border-top: 0.3px solid rgba(128, 128, 128, 0.19);
 }
 
 .about-img {
@@ -257,6 +262,7 @@ section {
 /*FORM*/
 form {
   border-radius: 20px;
+  background-color: var(--about-bg);
   box-shadow: 0 20px 12px 1px rgba(0, 0, 0, 0.06);
 }
 #fs-frm-inputs {
@@ -271,4 +277,122 @@ form {
 label {
   display: flex;
   flex-direction: column;
+}
+
+label > * {
+  border: 0px solid transparent;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+/* The animation code */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-section {
+  animation-name: fadeIn;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  position: relative;
+  opacity: 0;
+}
+
+/* typewriting */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container > p {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  color: white;
+  height: 55px;
+}
+.container p span.typed-text {
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  color: var(--font);
+}
+.container p span.cursor {
+  display: inline-block;
+  background-color: #000;
+  margin-left: 0.1rem;
+  width: 8px;
+  height: 100%;
+  animation: blink 1s infinite;
+}
+.container p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* moving words */
+.words {
+  color: black;
+  font-size: 2.75rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-family: "Poppins", sans-serif;
+  color: var(--font);
+  gap: 10px;
+}
+.bracket {
+  color: var(--logo-color);
+  animation: blink 2s infinite;
+}
+.words-container {
+  margin: 0;
+  overflow: hidden;
+  height: 55px;
+}
+.words-wrapper {
+  animation: swap 8s infinite;
+  display: flex;
+  flex-direction: column;
+}
+.word {
+  color: var(--font);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+@keyframes swap {
+  0% {
+    transform: translateY(-3px);
+  }
+  25% {
+    transform: translateY(-85px);
+  }
+  50% {
+    transform: translateY(-170px);
+  }
+  75% {
+    transform: translateY(-85px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
 }
