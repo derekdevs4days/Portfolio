@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600;1,800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,5
+      00;0,600;0,700;0,800;1,400;1,600;1,800&display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
@@ -275,7 +276,7 @@
             type="text"
             name="name"
             id="full-name"
-            placeholder="First and Last"
+            placeholder=""
             required=""
           /></label>
                 
@@ -283,7 +284,7 @@
             type="email"
             name="_replyto"
             id="email-address"
-                  placeholder="email@domain.tld"
+                  placeholder=""
             required=""
           /></label>
                 
@@ -291,7 +292,7 @@
             rows="5"
             name="message"
             id="message"
-                  placeholder="Aenean lacinia       bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."
+                  placeholder=""
             required=""
           ></textarea></label>
                 
@@ -301,22 +302,14 @@
             id="email-subject"
             value="Contact Form Submission"
           />
+        <input type="submit" value="Submit" class="submitButton" />
         </fieldset>
-        <input type="submit" value="Submit" />
             </form>
     </section>
 
-    <div id="tsparticles"></div>
-    <script>
-      tsParticles
-        .loadJSON("tsparticles", "options.json")
-        .then((container) => {
-          console.log("callback - tsparticles config loaded");
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    </script>
+    <div id="tsparticles-light"></div>
+    <div id="tsparticles-dark"></div>
+    <script src="options.js"></script>
 
     <script type="text/javascript">
       VanillaTilt.init(document.querySelectorAll(".hero-img"), {
